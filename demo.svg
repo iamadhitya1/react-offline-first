@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 228" width="520" height="228">
+<style>
+@keyframes s1{0%,3%{opacity:0}8%{opacity:1}23%{opacity:1}28%,100%{opacity:0}}
+@keyframes s2{0%,27%{opacity:0}32%{opacity:1}48%{opacity:1}53%,100%{opacity:0}}
+@keyframes s3{0%,52%{opacity:0}57%{opacity:1}72%{opacity:1}77%,100%{opacity:0}}
+@keyframes s4{0%,76%{opacity:0}81%{opacity:1}96%{opacity:1}100%{opacity:0}}
+.s1{animation:s1 10s ease infinite}
+.s2{animation:s2 10s ease infinite}
+.s3{animation:s3 10s ease infinite}
+.s4{animation:s4 10s ease infinite}
+</style>
+
+<rect width="520" height="228" rx="12" fill="#0d1117"/>
+<text x="260" y="28" fill="#52B788" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="0.8">react-offline-first</text>
+<text x="260" y="44" fill="#3a5a3a" font-family="system-ui,-apple-system,sans-serif" font-size="10" text-anchor="middle">Works offline · IndexedDB · Syncs when connected</text>
+
+<!-- App shell -->
+<rect x="55" y="55" width="410" height="158" rx="8" fill="#111820" stroke="#21262d" stroke-width="1"/>
+
+<!-- Todo items (static) -->
+<text x="82" y="106" fill="#52B788" font-family="system-ui,-apple-system,sans-serif" font-size="13">☑</text>
+<text x="102" y="106" fill="#6e7681" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-decoration="line-through">Buy groceries</text>
+<text x="82" y="128" fill="#52B788" font-family="system-ui,-apple-system,sans-serif" font-size="13">☑</text>
+<text x="102" y="128" fill="#6e7681" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-decoration="line-through">Fix the bug</text>
+<text x="82" y="150" fill="#e6edf3" font-family="system-ui,-apple-system,sans-serif" font-size="13">☐</text>
+<text x="102" y="150" fill="#e6edf3" font-family="system-ui,-apple-system,sans-serif" font-size="12">Write unit tests</text>
+<text x="82" y="172" fill="#e6edf3" font-family="system-ui,-apple-system,sans-serif" font-size="13">☐</text>
+<text x="102" y="172" fill="#e6edf3" font-family="system-ui,-apple-system,sans-serif" font-size="12">Deploy to Vercel</text>
+<text x="82" y="194" fill="#e6edf3" font-family="system-ui,-apple-system,sans-serif" font-size="13">☐</text>
+<text x="102" y="194" fill="#e6edf3" font-family="system-ui,-apple-system,sans-serif" font-size="12">Update README</text>
+
+<!-- State 1: Online synced -->
+<g class="s1">
+  <rect x="55" y="55" width="410" height="34" rx="8" fill="#011a0a" stroke="#00c86428" stroke-width="1"/>
+  <circle cx="80" cy="72" r="5" fill="#00c864"/>
+  <text x="93" y="77" fill="#00c864" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600">Online</text>
+  <text x="143" y="77" fill="#3a6a3a" font-family="system-ui,-apple-system,sans-serif" font-size="12">·  All synced ✓</text>
+</g>
+
+<!-- State 2: Offline, queued -->
+<g class="s2">
+  <rect x="55" y="55" width="410" height="34" rx="8" fill="#1a0001" stroke="#ff323228" stroke-width="1"/>
+  <circle cx="80" cy="72" r="5" fill="#ff3232"/>
+  <text x="93" y="77" fill="#ff3232" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600">Offline</text>
+  <text x="147" y="77" fill="#6a3a3a" font-family="system-ui,-apple-system,sans-serif" font-size="12">·  2 changes queued locally</text>
+</g>
+
+<!-- State 3: Syncing -->
+<g class="s3">
+  <rect x="55" y="55" width="410" height="34" rx="8" fill="#00101a" stroke="#79c0ff28" stroke-width="1"/>
+  <circle cx="80" cy="72" r="5" fill="#79c0ff"/>
+  <text x="93" y="77" fill="#79c0ff" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600">Syncing</text>
+  <text x="151" y="77" fill="#3a5a6a" font-family="system-ui,-apple-system,sans-serif" font-size="12">·  Uploading 2 of 2...</text>
+</g>
+
+<!-- State 4: Back online synced -->
+<g class="s4">
+  <rect x="55" y="55" width="410" height="34" rx="8" fill="#011a0a" stroke="#00c86428" stroke-width="1"/>
+  <circle cx="80" cy="72" r="5" fill="#00c864"/>
+  <text x="93" y="77" fill="#00c864" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600">Online</text>
+  <text x="143" y="77" fill="#3a6a3a" font-family="system-ui,-apple-system,sans-serif" font-size="12">·  All synced ✓</text>
+</g>
+</svg>

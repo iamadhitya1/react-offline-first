@@ -11,6 +11,10 @@
 
 Clone this. Build your app. It works offline on day one.
 
+<div align="center">
+  <img src="./demo.svg" alt="react-offline-first demo" width="520"/>
+</div>
+
 ---
 
 ## What's included
