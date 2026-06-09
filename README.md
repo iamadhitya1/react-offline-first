@@ -31,13 +31,29 @@ Clone this. Build your app. It works offline on day one.
 
 ---
 
-## Get started
+## Install
+
+**Option A — Use as a template** (start a new project from scratch):
 
 ```bash
 git clone https://github.com/iamadhitya1/react-offline-first
 cd react-offline-first
 npm install
 npm run dev
+```
+
+**Option B — Add to an existing React project:**
+
+```bash
+npm install react-offline-first
+```
+
+Then import the hooks you need:
+
+```js
+import { useOfflineData } from 'react-offline-first'
+import { useOnlineStatus } from 'react-offline-first'
+import { useSyncQueue } from 'react-offline-first'
 ```
 
 ---
