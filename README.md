@@ -164,8 +164,12 @@ navigator.serviceWorker.register('/sw.js')
 
 ---
 
+## Author
+
+**[M. Adhitya](https://iamadhitya.vercel.app)** — Founder of [Rewrite Labs](https://rewritelabs.vercel.app), final-year B.Tech Computer Engineering student at IITRAM Ahmedabad. Builds AI products and open source libraries.
+
 ## License
 
-MIT © 2025 [M Adhitya](https://github.com/iamadhitya1)
+MIT © 2025 [M. Adhitya](https://iamadhitya.vercel.app)
 
 Built at [Rewrite Labs](https://rewritelabs.vercel.app)
