@@ -1,12 +1,23 @@
 {
   "name": "react-offline-first",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React + Vite template for offline-first apps — IndexedDB, service worker, background sync, and conflict resolution.",
   "type": "module",
   "keywords": [
-    "react", "offline", "offline-first", "indexeddb", "service-worker",
-    "pwa", "sync", "background-sync", "vite", "react-template",
-    "offline-storage", "conflict-resolution", "react-pwa", "zero-dependencies"
+    "react",
+    "offline",
+    "offline-first",
+    "indexeddb",
+    "service-worker",
+    "pwa",
+    "sync",
+    "background-sync",
+    "vite",
+    "react-template",
+    "offline-storage",
+    "conflict-resolution",
+    "react-pwa",
+    "zero-dependencies"
   ],
   "author": {
     "name": "M. Adhitya",
