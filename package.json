@@ -10,6 +10,7 @@
     "indexeddb",
     "service-worker",
     "pwa",
+    "progressive-web-app",
     "sync",
     "background-sync",
     "vite",
@@ -17,7 +18,9 @@
     "offline-storage",
     "conflict-resolution",
     "react-pwa",
-    "zero-dependencies"
+    "zero-dependencies",
+    "local-first",
+    "sync-queue"
   ],
   "author": {
     "name": "M. Adhitya",

@@ -5,7 +5,7 @@
 ![React](https://img.shields.io/badge/React-18-61DAFB?logo=react)
 ![Zero Dependencies](https://img.shields.io/badge/runtime%20deps-0-brightgreen)
 
-> React + Vite template for apps that work fully offline and sync when connected.
+> React + Vite starter for Progressive Web Apps that work fully offline and sync when connected.
 
 **IndexedDB · Service Worker · Sync Queue · Conflict Resolution**
 
@@ -14,6 +14,26 @@ Clone this. Build your app. It works offline on day one.
 <div align="center">
   <img src="./demo.svg" alt="react-offline-first demo" width="520"/>
 </div>
+
+---
+
+## When to use this
+
+Use `react-offline-first` when:
+- You're building a **PWA (Progressive Web App)** that must work without a network connection
+- Your users are **in the field, on mobile, or in low-connectivity environments** (field tools, inspection apps, rural apps)
+- You need **local-first data** — changes write instantly to IndexedDB, sync to your API when online
+- You want **conflict resolution** built in, not bolted on
+
+Not the right fit if your app is purely server-driven with no offline requirement — a standard React + fetch setup is simpler. This template adds real complexity; only use it when offline support is a core feature requirement.
+
+---
+
+## Why not Workbox?
+
+Workbox (Google's service worker toolkit) is excellent for caching strategies. It handles *what gets cached* — app shell, images, API responses.
+
+`react-offline-first` solves a different layer: **data mutations while offline**. When a user creates, updates, or deletes a record with no connection, Workbox doesn't queue that write and replay it later. This template does — via a sync queue in IndexedDB that flushes automatically when the connection returns. Use Workbox for cache strategies; use this template for offline-capable CRUD.
 
 ---
 
@@ -33,7 +53,7 @@ Clone this. Build your app. It works offline on day one.
 
 ## Install
 
-**Option A — Use as a template** (start a new project from scratch):
+**Option A — Use as a template** (start a new project):
 
 ```bash
 git clone https://github.com/iamadhitya1/react-offline-first
@@ -61,7 +81,7 @@ import { useSyncQueue } from 'react-offline-first'
 ## Core hook — `useOfflineData`
 
 ```jsx
-import { useOfflineData } from './hooks/useOfflineData'
+import { useOfflineData } from 'react-offline-first'
 
 function TodoList() {
   const { records, loading, add, update, remove } = useOfflineData('todos')
@@ -87,7 +107,7 @@ Every `add`, `update`, `remove`:
 ## Sync Engine
 
 ```js
-import { configureSyncEngine } from './sync/syncEngine'
+import { configureSyncEngine } from 'react-offline-first'
 
 configureSyncEngine({
   apiBase: 'https://your-api.com/api',
@@ -119,7 +139,7 @@ configureSyncEngine({
 ## Sync status UI
 
 ```jsx
-import { useSyncQueue } from './hooks/useSyncQueue'
+import { useSyncQueue } from 'react-offline-first'
 
 function SyncBadge() {
   const { isOnline, pendingCount, syncing, sync } = useSyncQueue()
@@ -166,7 +186,7 @@ navigator.serviceWorker.register('/sw.js')
 
 ## Author
 
-**[M. Adhitya](https://iamadhitya.vercel.app)** — Founder of [Rewrite Labs](https://rewritelabs.vercel.app), final-year B.Tech Computer Engineering student at IITRAM Ahmedabad. Builds AI products and open source libraries.
+**[M. Adhitya](https://iamadhitya.vercel.app)** — Founder, [Rewrite Labs](https://rewritelabs.vercel.app)
 
 ## License
 
