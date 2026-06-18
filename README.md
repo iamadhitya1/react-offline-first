@@ -1,5 +1,6 @@
-# react-offline-first
+# react-offline-kit
 
+[![npm](https://img.shields.io/npm/v/react-offline-kit.svg)](https://www.npmjs.com/package/react-offline-kit)
 [![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![GitHub](https://img.shields.io/badge/GitHub-iamadhitya1-blue?logo=github)](https://github.com/iamadhitya1)
 ![React](https://img.shields.io/badge/React-18-61DAFB?logo=react)
@@ -65,15 +66,15 @@ npm run dev
 **Option B — Add to an existing React project:**
 
 ```bash
-npm install react-offline-first
+npm install react-offline-kit
 ```
 
 Then import the hooks you need:
 
 ```js
-import { useOfflineData } from 'react-offline-first'
-import { useOnlineStatus } from 'react-offline-first'
-import { useSyncQueue } from 'react-offline-first'
+import { useOfflineData } from 'react-offline-kit'
+import { useOnlineStatus } from 'react-offline-kit'
+import { useSyncQueue } from 'react-offline-kit'
 ```
 
 ---
@@ -107,7 +108,7 @@ Every `add`, `update`, `remove`:
 ## Sync Engine
 
 ```js
-import { configureSyncEngine } from 'react-offline-first'
+import { configureSyncEngine } from 'react-offline-kit'
 
 configureSyncEngine({
   apiBase: 'https://your-api.com/api',
